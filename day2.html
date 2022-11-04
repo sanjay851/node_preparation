@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-2</title>
+    <link rel="stylesheet" href="./Allfiles.css">
+</head>
+<body>
+    <div id="day">
+        <h1>Q1.What are the different types of HTTP requests?</h1>
+        <h2>Answer</h2>
+        <h3>HTTP (Hypertext Transfer Protocol) specifies a collection of request methods to specify what action is to be performed on a particular resource. The most commonly used HTTP request.methods are GET, POST, PUT, PATCH, and DELETE. These are equivalent to the CRUD operations (create, read, update, and delete). GET: GET request is used to read/retrieve data from a web server. GET returns an HTTP status code of 200 (OK) if the data is successfully retrieved from the server. POST: POST request is used to send data (file, form data, etc.) to the server. On successful creation, it returns an HTTP status code of 201. PUT: A PUT request is used to modify the data on the server. It replaces the entire content at a particular location with data that is passed in the body payload. If there are no resources that match the request, it will generate one. PATCH: PATCH is similar to PUT request, but the only difference is, it modifies a part of the data. It will only replace the content that you want to update. DELETE: A DELETE request is used to delete the data on the server at a specified location.</h3>
+    </div>
+    <div id="day">
+        <h1>Q2.Explain the concept of middleware in Node.js.</h1>
+        <h2>Answer</h2>
+        <h3>Express.js is a routing and Middleware framework for handling the different routing of the webpage and it works between the request and response cycle.
+             Middleware gets executed after the server receives the request and before the controller actions send the response.
+             Middleware has the access to the request object, responses object, and next, it can process the request before the server send a response. An Express-based application is a series of middleware function calls.
+             Middleware Chaining: Middleware can be chained from one to another, Hence creating a chain of functions that are executed in order. The last function sends the response back to the browser. So, before sending the response back to the browser the different middleware processes the request.
+             The next() function in the express is responsible for calling the next middleware function if there is one.
+             app.get(path, (req, res, next) => {}, (req, res) => {})
+            </h3>
+    </div>
+    <div id="day">
+        <h1>Q3.Explain CORS</h1>
+        <h2>Answer</h2>
+        <h3>CORS : (Cross-Origin Resource Sharing) is a mechanism by which data or any other resource of a site could be shared intentionally to a third party website when there is a need. Generally, access to resources that are residing in a third party site is restricted by the browser clients for security purposes.
+           </h3>
+           <h1>command for install  cors in our project  - npm i cors</h1>
+           <pre>
+            const cors = require("cors")
+             app.use(cors())
+             app.get('/default',defau,(req,res)=>{
+             console.log("default")
+             })
+           </pre>
+    </div>
+    <div id="day">
+        <h1>Q4.What is Express. how it helps you to create a backend application?</h1>
+        <h2>Answer</h2>
+        <h3>
+            Express.js: Express is a small framework that sits on top of Node.js’s web server functionality to simplify its APIs and add helpful new features. It makes it easier to organize your. application’s functionality with middleware and routing. It adds helpful utilities to Node.js’s HTTP objects. It facilitates the rendering of dynamic HTTP objects. *More features than Node.js *It is used to build web-apps using approaches and principles of Node.js. *Routing is provided. *It requires less coding time. *Uses middleware for the arrangement of functions systematically server-side. *import by const express = require ("express")
+        </h3>
+    </div>
+    <div id="day">
+        <h1>Q5.Explain min 5 status codes gets used in Backend development?</h1>
+        <h2>Answer</h2>
+        <p>
+            An HTTP status code is a message a website's server sends to the browser to indicate whether or not that request can be fulfilled. 
+            Status codes specs are set by the W3C. Status codes are embedded in the HTTP header of a page to tell the browser the result of its request.
+        </p>
+        <ul>
+            <li>102 PROCESSING Processing 200 OK OK</li>
+            <li>400 BAD_REQUEST Bad Request</li>
+            <li>401 UNAUTHORIZED Unauthorized</li>
+            <li>402 PAYMENT_REQUIRED Payment Required</li>
+            <li>403 FORBIDDEN Forbidden</li>
+            <li>404 NOT_FOUND Not Found</li>
+            <li>500 INTERNAL_SERVER_ERROR Internal Server Error</li>
+            <li>503 - Service Unavailable</li>
+        </ul>
+    </div>
+    <div id="day">
+        <h1>Q6.Difference between HTTP and HTTPS?</h1>
+        <h2>Answer</h2>
+        <h2>HTTP</h2>
+        <pre>
+           1. HTTP stands for "Hyper Text Transfer Protocol".
+           2. In HTTP,URL begins with "http://".
+           3. HTTP is considered to be insecured.
+           4. HTTP speed is faster than HTTPS.
+           5. HTTP uses port number 80 for communication.
+        </pre>
+        <h2>HTTPs</h2>
+        <pre>
+           1. HTTPS stands for "Hyper Text Transfer Protocol secure".
+           2. In HTTPS,URL begins with "https://".
+           3.HTTPS is secure.
+           4. HTTPS speed is slower than HTTP.
+           5. HTTPS uses port number 443 for communication.
+        </pre>
+    </div>
+    <div id="day">
+        <h1>Q7.What are JWT tokens?</h1>
+        <h2>Answer</h2>
+        <h3>
+            JSON Web Token is an open standard for securely transferring data within parties using a JSON object. JWT is used for stateless authentication mechanisms for users and providers, this means maintaining session is on the client-side instead of storing sessions on the server. Here, we will implement the JWT authentication system in NodeJs.
+        </h3>
+    </div>
+</body>
+</html>
